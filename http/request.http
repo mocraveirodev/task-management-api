@@ -61,3 +61,13 @@ GET http://localhost:3000/task
 
 ###
 GET http://localhost:3000/task?status=status&title=title
+
+### Create User
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "teste",
+  "password": "12345"
+}
