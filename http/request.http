@@ -6,12 +6,11 @@ GET http://localhost:3000
 
 POST http://localhost:3000/task
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiNmFiYmYwMjYtYjFmNi00NGQ2LTg5MTEtY2FiYWUzNDNhNDczIiwiaWF0IjoxNzI0NjI4NzY5LCJleHAiOjE3MjQ2MzIzNjl9.5bhPPCZcbwkZpJ0uz_TWjCuZYn0LyS5lnBOp2kNBFY8
 
 {
-  "id": "asdkjbackjsbaj",
-  "title": "title",
+  "title": "1awdnlajldlasnlna21awdnlajldlasnlna21awdnlajldlasnlna2",
   "description": "description",
-  "status": "status",
   "expirationDate": "2024-08-25"
 }
 
@@ -58,7 +57,7 @@ GET http://localhost:3000/task?status=oto
 ###
 
 GET http://localhost:3000/task
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOWY2NjAzYWItODk2OC00YzIwLTkzOGItOTgxYWQ1MTRhMDkzIiwiaWF0IjoxNzI0NjI0ODYzLCJleHAiOjE3MjQ2Mjg0NjN9.VhpoDSbSzwx5lw0KZqEmYjhcBR6AfDR7EGoxJ0kMRsw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiNmFiYmYwMjYtYjFmNi00NGQ2LTg5MTEtY2FiYWUzNDNhNDczIiwiaWF0IjoxNzI0NjI4NzY5LCJleHAiOjE3MjQ2MzIzNjl9.5bhPPCZcbwkZpJ0uz_TWjCuZYn0LyS5lnBOp2kNBFY8
 
 ###
 GET http://localhost:3000/task?status=status&title=title
