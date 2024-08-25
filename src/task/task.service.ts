@@ -7,7 +7,7 @@ export class TaskService {
 
   create(task: TaskDto) {
     this.tasks.push(task);
-    console.log(this.tasks);
+    return task;
   }
 
   findById(id: string): TaskDto {
@@ -22,6 +22,21 @@ export class TaskService {
     throw new HttpException(
       `Task with ID ${id} not found`,
       HttpStatus.NOT_FOUND,
+    );
+  }
+
+  update(id: string, task: TaskDto) {
+    const foundIndex = this.tasks.findIndex((task) => task.id === id);
+
+    if (foundIndex >= 0) {
+      this.tasks[foundIndex] = { id, ...task };
+
+      return this.tasks[foundIndex];
+    }
+
+    throw new HttpException(
+      `Task with ID ${id} not found`,
+      HttpStatus.BAD_REQUEST,
     );
   }
 }
