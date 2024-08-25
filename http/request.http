@@ -14,3 +14,7 @@ Content-Type: application/json
   "status": "status",
   "expirationDate": "2024-08-25"
 }
+
+### Get Task by id
+
+GET http://localhost:3000/task/asdkjbackjsbaj
