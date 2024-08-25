@@ -1,0 +1,16 @@
+### Hello
+
+GET http://localhost:3000
+
+### Post Create Task
+
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+  "id": "asdkjbackjsbaj",
+  "title": "title",
+  "description": "description",
+  "status": "status",
+  "expirationDate": "2024-08-25"
+}
