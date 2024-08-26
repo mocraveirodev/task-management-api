@@ -9,7 +9,7 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
-import { FindAllParameters, TaskDto } from './task.dto';
+import { FindAllParameters, TaksRouteParameters, TaskDto } from './task.dto';
 import { TaskService } from './task.service';
 import { AuthGuard } from 'src/auth/auth.guard';
 
@@ -18,27 +18,30 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class TaskController {
   constructor(private readonly taskService: TaskService) {}
   @Post()
-  create(@Body() task: TaskDto): TaskDto {
-    return this.taskService.create(task);
+  async create(@Body() task: TaskDto): Promise<TaskDto> {
+    return await this.taskService.create(task);
   }
 
   @Get('/:id')
-  findById(@Param('id') id: string): TaskDto {
-    return this.taskService.findById(id);
+  async findById(@Param('id') id: string): Promise<TaskDto> {
+    return await this.taskService.findById(id);
   }
 
   @Get()
-  findAll(@Query() params: FindAllParameters): TaskDto[] {
-    return this.taskService.findAll(params);
+  async findAll(@Query() params: FindAllParameters): Promise<TaskDto[]> {
+    return await this.taskService.findAll(params);
   }
 
   @Put('/:id')
-  update(@Param('id') id: string, @Body() task: TaskDto): TaskDto {
-    return this.taskService.update(id, task);
+  async update(
+    @Param() params: TaksRouteParameters,
+    @Body() task: TaskDto,
+  ): Promise<void> {
+    await this.taskService.update(params.id, task);
   }
 
   @Delete('/:id')
-  delete(@Param('id') id: string): string {
-    return this.taskService.delete(id);
+  async delete(@Param() params: TaksRouteParameters): Promise<string> {
+    return this.taskService.delete(params.id);
   }
 }

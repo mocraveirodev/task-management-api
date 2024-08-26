@@ -6,7 +6,7 @@ GET http://localhost:3000
 
 POST http://localhost:3000/task
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiNmFiYmYwMjYtYjFmNi00NGQ2LTg5MTEtY2FiYWUzNDNhNDczIiwiaWF0IjoxNzI0NjI4NzY5LCJleHAiOjE3MjQ2MzIzNjl9.5bhPPCZcbwkZpJ0uz_TWjCuZYn0LyS5lnBOp2kNBFY8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 {
   "title": "1awdnlajldlasnlna21awdnlajldlasnlna21awdnlajldlasnlna2",
@@ -29,38 +29,44 @@ Content-Type: application/json
 
 ### Get Task by id
 
-GET http://localhost:3000/task/asdkjbackjsbaj
+GET http://localhost:3000/task/37f0a057-81a2-4d22-ae07-43b2ce2721be
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ### Update Task by id
 
-PUT http://localhost:3000/task/asdkjbackjsbaj
+PUT http://localhost:3000/task/37f0a057-81a2-4d22-ae07-43b2ce2721be
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 {
   "title": "new title",
   "description": "new description",
-  "status": "new status",
+  "status": "DONE",
   "expirationDate": "2024-08-25"
 }
 
 ### Delete task
 
-DELETE http://localhost:3000/task/asdkjbackjsbaj
+DELETE http://localhost:3000/task/37f0a057-81a2-4d22-ae07-43b2ce2721be
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ### Find by parameters
 
-GET http://localhost:3000/task?title=title
+GET http://localhost:3000/task?title=1awdnlaj
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ###
-GET http://localhost:3000/task?status=oto
+GET http://localhost:3000/task?status=DO
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ###
 
 GET http://localhost:3000/task
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiNmFiYmYwMjYtYjFmNi00NGQ2LTg5MTEtY2FiYWUzNDNhNDczIiwiaWF0IjoxNzI0NjI4NzY5LCJleHAiOjE3MjQ2MzIzNjl9.5bhPPCZcbwkZpJ0uz_TWjCuZYn0LyS5lnBOp2kNBFY8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ###
 GET http://localhost:3000/task?status=status&title=title
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlIiwic3ViIjoiOTFhOWE1YTUtNDI5ZC00ZWViLTkzMDgtZjczNzFjYTNlMzhlIiwiaWF0IjoxNzI0NjQ4NDYyLCJleHAiOjE3MjQ2NTIwNjJ9.5UFnYtxrJcOLXpphImd3sMI9_SHl-9vL2IbWF9M4xE0
 
 ### Create User
 
